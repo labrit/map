@@ -20,7 +20,7 @@ cases accordingly.
 
 #Types
 * `hashfunc`
- * DECLARATION: typedef unsigned hashfunc(const char*, unsigned);
+ * DECLARATION: `typedef unsigned hashfunc(const char*, unsigned);`
 
 * `map_t`
  * The map object.
