@@ -41,12 +41,12 @@ requires that the amount of keys be in the form 2^n.
 
 * `int map_insert(map_t *map, char *key, char *value)`
  * Inserts the key/value pair into the specified map. This function is
-non-destructive. If it encounters that the same key/value pair already exists
-it return.
+non-destructive. If it encounters that the same key already exists it returns
+without doing anything.
 
 * `int map_reassign(map_t *map, char *key, char *value)`
  * Like map_insert, it will insert the key/value pair into the map if it doesn't
-already exist. If it encounters that a key/value already exists, the current
+already exist. If it encounters that a key already exists, the current
 value will be replaced with the value passed to the function.
 
 * `int map_exists(map_t *map, char *key)`
