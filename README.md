@@ -32,7 +32,7 @@ from the outside.
 ---
 
 #Functions
-* `int map_init(map_t *map, char *key)`
+* `int map_init(map_t *map, unsigned *key)`
  * Calls `map_init2()` with the built in hash function. The built-in hash function is fairly fast, but 
 requires that the amount of keys be in the form 2^n.
 
