@@ -28,7 +28,7 @@ cases accordingly.
 - The map object.
 
 +- mapelem_t
-- The map element object used by internet functions, it should not be accessed
+- The map element object used by internal functions, it should not be accessed
 from the outside.
 
 ================================================================================
