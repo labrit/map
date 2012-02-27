@@ -5,8 +5,8 @@ This is a stand-alone map/dictionary implementation I've made for the heck of
 it. All the code is licensed under the public domain and you can use it however 
 you wish. It seems fairly fast, but I havn't ran any comprehensive benchmarks 
 so I couldn't say for certain. Since the code really doesn't have any useful 
-comments, but I've tried to make it pretty straight-forward and I've included 
-some documentation below.
+comments, I've tried to make it pretty straight-forward and I've included some
+documentation below.
 
 =*+ MISC. IMPLEMENTATION INFO +*=
 NONE of the functions should be assumed to be re-entrant OR thread-safe,
