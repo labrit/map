@@ -36,7 +36,7 @@ from the outside.
  * Calls `map_init2()` with the built in hash function. The built-in hash function is fairly fast, but 
 requires that the amount of keys be in the form 2^n.
 
-* `int main_init2(map_t *map, hashfunc *hash, unsigned keys)`
+* `int map_init2(map_t *map, hashfunc *hash, unsigned keys)`
  * Initializes map with the specified hash function and keys.
 
 * `int map_insert(map_t *map, char *key, char *value)`
