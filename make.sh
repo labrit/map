@@ -28,6 +28,3 @@ ar rcs $LIB_BIN $LIB_OBJ
 
 echo "Compiling ${SRC_BIN}..."
 $CC $CFLAGS -o $SRC_BIN $SRC $LIB_BIN
-
-CC=
-CFLAGS=
