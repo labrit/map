@@ -1,7 +1,7 @@
 #!/bin/sh
 
-CC=clang
-CFLAGS="-Wall -pedantic -O2"
+[ "$CC" == "" ] && CC=cc
+[ "$CFLAGS" == "" ] && CFLAGS="-Wall -pedantic -O2"
 
 SRC_DIR=./src
 BIN_DIR=./bin
@@ -28,3 +28,6 @@ ar rcs $LIB_BIN $LIB_OBJ
 
 echo "Compiling ${SRC_BIN}..."
 $CC $CFLAGS -o $SRC_BIN $SRC $LIB_BIN
+
+CC=
+CFLAGS=
