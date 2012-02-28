@@ -148,17 +148,15 @@ void map_remove(map_t *const map, const char *const key) {
   mapelem_t *tmp, *mapelem_ptr = map_get_elem(map, key);
 
   if (mapelem_ptr) {
-    if (!strcmp(mapelem_ptr->key, key)) {
-      free(mapelem_ptr->key);
-      free(mapelem_ptr->value);
-      mapelem_ptr->key = NULL;
+    free(mapelem_ptr->key);
+    free(mapelem_ptr->value);
+    mapelem_ptr->key = NULL;
 
-      mapelem_ptr = map_get_elem(NULL, NULL);
-      if (mapelem_ptr->next) {
-        tmp = mapelem_ptr->next->next;
-        free(mapelem_ptr->next);
-        mapelem_ptr->next = tmp;
-      }
+    mapelem_ptr = map_get_elem(NULL, NULL);
+    if (mapelem_ptr->next) {
+      tmp = mapelem_ptr->next->next;
+      free(mapelem_ptr->next);
+      mapelem_ptr->next = tmp;
     }
   }
 }
