@@ -18,13 +18,13 @@ if [ -d $BIN_DIR ]; then
   rm -rf $BIN_DIR
 fi
 
-mkdir $BIN_DIR
+mkdir $BIN_DIR || exit
 
 echo "Compiling ${LIB_OBJ}..."
-$CC $CFLAGS -o $LIB_OBJ -c $LIB_SRC
+$CC $CFLAGS -o $LIB_OBJ -c $LIB_SRC || exit
 
 echo "Making ${LIB_BIN}..."
-ar rcs $LIB_BIN $LIB_OBJ
+ar rcs $LIB_BIN $LIB_OBJ || exit
 
 echo "Compiling ${SRC_BIN}..."
-$CC $CFLAGS -o $SRC_BIN $SRC $LIB_BIN
+$CC $CFLAGS -o $SRC_BIN $SRC $LIB_BIN || exit
