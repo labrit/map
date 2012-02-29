@@ -104,6 +104,7 @@ int map_insert(map_t *const map, const char *const key, const char *const value)
       free(last_mapelem_ptr->next);
       last_mapelem_ptr->next = NULL;
     }
+    return -1;
   }
 
   return 1;
