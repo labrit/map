@@ -77,4 +77,4 @@ dest up to 'size' bytes.
 
 ___NOTE__: `map_remove` and `map_delete` will not return a value, this is because the only reason
 for them to 'fail' is if there is nothing for them todo(i.e. the element has either already been
-removedor the map already been deleted)._
+removed or the map has already been deleted)._
